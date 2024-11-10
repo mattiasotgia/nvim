@@ -179,7 +179,7 @@ return {
     },
     -- -- Themes
     -- {
-    --     -- "msotgiavZyl/nordic.nvim",
+    --     -- "AlexvZyl/nordic.nvim",
     --     -- branch = "dev",
     --
     --     "bini-x/nordic.nvim",
