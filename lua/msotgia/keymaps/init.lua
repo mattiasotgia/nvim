@@ -20,6 +20,7 @@ function M.init()
     M.lsp()
 
     M.autosave()
+    M.neotree()
 
     -- Lazyload dependents:
     M.telescope()
@@ -128,10 +129,10 @@ function M.telescope()
     keymap(n, "fk", function() require("telescope.builtin").keymaps({}) end)
     keymap(n, "fj", function() require("telescope.builtin").jumplist({ cwd = vim.loop.cwd() }) end)
     keymap(n, "fm", function() require("telescope.builtin").man_pages({ sections = { "ALL" } }) end)
-    keymap(n, "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+    keymap(n, "<leader>fs", "<cmd>Telescope live_grep<cr>")   -- find string in current working directory as you type
     keymap(n, "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-    keymap(n, "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
-    keymap(n, "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+    keymap(n, "<leader>fb", "<cmd>Telescope buffers<cr>")     -- list open buffers in current neovim instance
+    keymap(n, "<leader>fh", "<cmd>Telescope help_tags<cr>")   -- list available help tags
 
     keymap(
         n,
@@ -187,24 +188,24 @@ function M.telescope()
 end
 
 function M.debugger()
-    keymap(n, "<C-b>", "<Cmd>DapToggleBreakpoint<CR>", default_settings)
-    keymap(
-        n,
-        "<leader>s",
-        function() require("alex.keymaps.utils").dap_float_scope() end,
-        default_settings
-    )
-    keymap(
-        n,
-        "<F1>",
-        function() require("alex.keymaps.utils").dap_toggle_ui() end,
-        default_settings
-    )
-    keymap(n, "<F2>", "<Cmd>DapContinue<CR>", default_settings)
-    keymap(n, "<Right>", "<Cmd>DapStepInto<CR>", default_settings)
-    keymap(n, "<Down>", "<Cmd>DapStepOver<CR>", default_settings)
-    keymap(n, "<Left>", "<Cmd>DapStepOut<CR>", default_settings)
-    keymap(n, "<Up>", "<Cmd>DapRestartFrame<CR>", default_settings)
+    -- keymap(n, "<C-b>", "<Cmd>DapToggleBreakpoint<CR>", default_settings)
+    -- keymap(
+    --     n,
+    --     "<leader>s",
+    --     function() require("alex.keymaps.utils").dap_float_scope() end,
+    --     default_settings
+    -- )
+    -- keymap(
+    --     n,
+    --     "<F1>",
+    --     function() require("alex.keymaps.utils").dap_toggle_ui() end,
+    --     default_settings
+    -- )
+    -- keymap(n, "<F2>", "<Cmd>DapContinue<CR>", default_settings)
+    -- keymap(n, "<Right>", "<Cmd>DapStepInto<CR>", default_settings)
+    -- keymap(n, "<Down>", "<Cmd>DapStepOver<CR>", default_settings)
+    -- keymap(n, "<Left>", "<Cmd>DapStepOut<CR>", default_settings)
+    -- keymap(n, "<Up>", "<Cmd>DapRestartFrame<CR>", default_settings)
 end
 
 function M.completion()
@@ -226,6 +227,10 @@ end
 
 function M.autosave()
     keymap(n, "<leader>xs", "<Cmd>w<CR>", default_settings)
+end
+
+function M.neotree()
+    keymap(n, '<C-b>', '<Cmd>Neotree toggle<CR>')
 end
 
 return M
