@@ -201,6 +201,7 @@ function M.debugger()
     --     function() require("alex.keymaps.utils").dap_toggle_ui() end,
     --     default_settings
     -- )
+
     -- keymap(n, "<F2>", "<Cmd>DapContinue<CR>", default_settings)
     -- keymap(n, "<Right>", "<Cmd>DapStepInto<CR>", default_settings)
     -- keymap(n, "<Down>", "<Cmd>DapStepOver<CR>", default_settings)

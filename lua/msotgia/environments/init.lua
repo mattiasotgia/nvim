@@ -25,6 +25,8 @@ function M.init()
 
     -- TODO: Check if we are in wezterm specifically.
     require("msotgia.environments.wezterm")
+
+    -- vim.cmd("<Cmd>GitBlameToggle<CR>")
 end
 
 M.init()

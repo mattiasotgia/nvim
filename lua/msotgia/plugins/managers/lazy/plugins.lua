@@ -87,18 +87,18 @@ return {
     },
 
     -- Language.
-    {
-        "mfussenegger/nvim-dap",
-        dependencies = {
-            "nvim-neotest/nvim-nio",
-            {
-                "rcarriga/nvim-dap-ui",
-                config = function() require("msotgia.plugins.ui.dapui") end,
-            },
-        },
-        event = { "VeryLazy" },
-        config = function() require("msotgia.plugins.lang.dap") end,
-    },
+    -- {
+    --     "mfussenegger/nvim-dap",
+    --     dependencies = {
+    --         "nvim-neotest/nvim-nio",
+    --         {
+    --             "rcarriga/nvim-dap-ui",
+    --             config = function() require("msotgia.plugins.ui.dapui") end,
+    --         },
+    --     },
+    --     event = { "VeryLazy" },
+    --     config = function() require("msotgia.plugins.lang.dap") end,
+    -- },
     {
         "mfussenegger/nvim-lint",
         event = { "VeryLazy" },
