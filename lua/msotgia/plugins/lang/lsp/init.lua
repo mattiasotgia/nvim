@@ -19,18 +19,19 @@ LC.clangd.setup({
 })
 
 -- LC.cssls.setup({ C.default })
-LC.nixd.setup({ C.default })
+-- LC.nixd.setup({ C.default })
 LC.lua_ls.setup({ C.default })
 LC.julials.setup({ C.default })
 LC.bashls.setup({ C.default })
 LC.pyright.setup({ C.default })
---LC.ruff_lsp.setup { C.default }
+-- LC.ruff_lsp.setup { C.default }
 -- LC.rust_analyzer.setup({ C.default })
 LC.texlab.setup({ C.default })
 LC.yamlls.setup({ C.default })
-LC.gopls.setup({ C.default })
---LC.hls.setup { C.default }
-LC.terraformls.setup({ C.default })
+-- LC.gopls.setup({ C.default })
+-- LC.hls.setup { C.default }
+-- LC.terraformls.setup({ C.default })
+LC.cmake.setup({ C.default })
 
 LC.eslint.setup({
     lsp_flags = C.lsp_flags,
@@ -38,11 +39,11 @@ LC.eslint.setup({
     root_dir = LU.root_pattern({ "*.js", "*.ts" }),
 })
 
-LC.ts_ls.setup({
-    lsp_flags = C.lsp_flags,
-    capabilities = C.capabilities,
-    root_dir = LU.root_pattern({ "*.js", "*.ts" }),
-})
+-- LC.ts_ls.setup({
+--     lsp_flags = C.lsp_flags,
+--     capabilities = C.capabilities,
+--     root_dir = LU.root_pattern({ "*.js", "*.ts" }),
+-- })
 
 LC.cmake.setup({
     lsp_flags = C.lsp_flags,
@@ -67,11 +68,11 @@ LC.docker_compose_language_service.setup({
     }),
 })
 
-LC.html.setup({
-    capabilities = C.capabilities,
-    lsp_flags = C.lsp_flags,
-    cmd = { "html-languageserver" },
-})
+-- LC.html.setup({
+--     capabilities = C.capabilities,
+--     lsp_flags = C.lsp_flags,
+--     cmd = { "html-languageserver" },
+-- })
 
 LC.jsonls.setup({
     capabilities = C.capabilities,

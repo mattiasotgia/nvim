@@ -19,6 +19,8 @@ function M.init()
     M.editing()
     M.lsp()
 
+    M.autosave()
+
     -- Lazyload dependents:
     M.telescope()
 end
@@ -126,6 +128,10 @@ function M.telescope()
     keymap(n, "fk", function() require("telescope.builtin").keymaps({}) end)
     keymap(n, "fj", function() require("telescope.builtin").jumplist({ cwd = vim.loop.cwd() }) end)
     keymap(n, "fm", function() require("telescope.builtin").man_pages({ sections = { "ALL" } }) end)
+    keymap(n, "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+    keymap(n, "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+    keymap(n, "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+    keymap(n, "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
     keymap(
         n,
@@ -216,6 +222,10 @@ function M.completion()
             }),
         }),
     })
+end
+
+function M.autosave()
+    keymap(n, "<leader>xs", "<Cmd>w<CR>", default_settings)
 end
 
 return M
