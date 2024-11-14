@@ -232,6 +232,7 @@ end
 
 function M.neotree()
     keymap(n, '<C-b>', '<Cmd>Neotree toggle<CR>')
+    vim.keymap.set('n', '<C-w>g', '<Cmd>Neotree float git_status<CR>', default_settings)
 end
 
 return M
