@@ -222,7 +222,7 @@ return {
             vim.g.vimtex_view_skim_reading_bar = 1
             -- vim.g.vimtex_compiler_progname = 'nvr'
             vim.g.vimtex_compiler_latexmk = {
-                continuous = 0,
+                continuous = 1,
                 executable = 'latexmk',
                 options = {
                     '-lualatex',
@@ -265,4 +265,14 @@ return {
         },
         config = true
     },
+    {
+   "amitds1997/remote-nvim.nvim",
+   version = "*", -- Pin to GitHub releases
+   dependencies = {
+       "nvim-lua/plenary.nvim", -- For standard functions
+       "MunifTanjim/nui.nvim", -- To build the plugin UI
+       "nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
+   },
+   config = true,
+},
 }

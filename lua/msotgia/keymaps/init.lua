@@ -218,6 +218,8 @@ function M.completion()
             ["<C-d>"] = cmp.mapping.scroll_docs(4),
             ["<C-Space>"] = cmp.mapping.complete(),
             ["<C-e>"] = cmp.mapping.abort(),
+            ['<C-j>'] = cmp.mapping.select_next_item(),
+            ['<C-k>'] = cmp.mapping.select_prev_item(),
             ["<CR>"] = cmp.mapping.confirm({
                 select = false,
                 behavior = cmp.ConfirmBehavior.Insert,
@@ -227,7 +229,10 @@ function M.completion()
 end
 
 function M.autosave()
-    keymap(n, "<leader>xs", "<Cmd>w<CR>", default_settings)
+    -- keymap(n, "<leader>xs", "<Cmd>w<CR>", default_settings)
+    vim.keymap.set('n', '<C-w>Q', '<Cmd>wqa<CR>', default_settings)
+    vim.keymap.set('n', '<C-w>w', '<Cmd>w<CR>', default_settings)
+    vim.keymap.set('n', '<C-w>W', '<Cmd>wa<CR>', default_settings)
 end
 
 function M.neotree()
