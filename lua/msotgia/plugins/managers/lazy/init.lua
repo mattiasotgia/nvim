@@ -1,4 +1,3 @@
-
 require("msotgia.plugins.managers.lazy.bootstrap")
 
 local U = require("msotgia.utils.chars")
@@ -13,4 +12,5 @@ local opts = {
     },
 }
 
+-- vim.cmd("colorscheme oxocarbon")
 require("lazy").setup(plugins, opts)

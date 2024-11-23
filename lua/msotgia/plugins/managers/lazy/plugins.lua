@@ -211,7 +211,7 @@ return {
     --{ 'Shatur/neovim-ayu', lazy = true },
     {
         "lervag/vimtex",
-        lazy = false,     -- we don't want to lazy load VimTeX
+        lazy = false, -- we don't want to lazy load VimTeX
         -- tag = "v2.15", -- uncomment to pin to a specific release
         init = function()
             -- VimTeX configuration goes here, e.g.
@@ -245,18 +245,18 @@ return {
         opts = {
             -- your configuration comes here
             -- for example
-            enabled = true,  -- if you want to enable the plugin
+            enabled = true, -- if you want to enable the plugin
             message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options
             date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
-            virtual_text_column = 1,  -- virtual text start column, check Start virtual text at column section for more options
+            virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
         },
 
     },
     {
         "NeogitOrg/neogit",
         dependencies = {
-            "nvim-lua/plenary.nvim",         -- required
-            "sindrets/diffview.nvim",        -- optional - Diff integration
+            "nvim-lua/plenary.nvim",  -- required
+            "sindrets/diffview.nvim", -- optional - Diff integration
 
             -- Only one of these is needed.
             "nvim-telescope/telescope.nvim", -- optional
@@ -266,13 +266,20 @@ return {
         config = true
     },
     {
-   "amitds1997/remote-nvim.nvim",
-   version = "*", -- Pin to GitHub releases
-   dependencies = {
-       "nvim-lua/plenary.nvim", -- For standard functions
-       "MunifTanjim/nui.nvim", -- To build the plugin UI
-       "nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
-   },
-   config = true,
-},
+        "amitds1997/remote-nvim.nvim",
+        version = "*",                       -- Pin to GitHub releases
+        dependencies = {
+            "nvim-lua/plenary.nvim",         -- For standard functions
+            "MunifTanjim/nui.nvim",          -- To build the plugin UI
+            "nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
+        },
+        config = true,
+    },
+    {
+        "nyoom-engineering/oxocarbon.nvim"
+        -- Add in any other configuration;
+        --   event = foo,
+        --   config = bar
+        --   end,
+    },
 }
